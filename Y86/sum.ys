@@ -1,0 +1,36 @@
+.pos 0x300 data
+len:
+    .quad 4
+nums:
+    .quad 1
+    .quad 2
+    .quad 3
+    .quad 4
+
+.pos 0x100 code
+_start:
+
+    irmovq $1200, %rsp
+
+    mrmovq nums, %rdi
+    mrmovq len, %rsi
+
+    irmovq $0, %rax
+
+    call L2
+    halt
+
+.pos 0x200 code
+L1:
+    addq %rdi, %rax
+    irmovq $1, %rcx
+    addq %rcx, %rdi
+    subq %rcx, %rsi
+
+
+L2:
+    irmovq $0, %rcx
+    subq %rcx, %rsi
+    jg L1
+    ret
+

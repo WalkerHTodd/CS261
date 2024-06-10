@@ -1,0 +1,28 @@
+==2666428== Memcheck, a memory error detector
+==2666428== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2666428== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2666428== Command: ../intro -c inputs/B_cat.txt
+==2666428== 
+== HEADING ==
+
+This is some sample text. It is in a longer paragraph so that there are multiple
+lines of output. After this paragraph, there is single blank line before the
+second (and final) paragraph.
+
+This is the final paragraph. There is also a blank line after this sentence.
+
+==2666428== 
+==2666428== HEAP SUMMARY:
+==2666428==     in use at exit: 472 bytes in 1 blocks
+==2666428==   total heap usage: 4 allocs, 3 frees, 17,328 bytes allocated
+==2666428== 
+==2666428== LEAK SUMMARY:
+==2666428==    definitely lost: 0 bytes in 0 blocks
+==2666428==    indirectly lost: 0 bytes in 0 blocks
+==2666428==      possibly lost: 0 bytes in 0 blocks
+==2666428==    still reachable: 472 bytes in 1 blocks
+==2666428==         suppressed: 0 bytes in 0 blocks
+==2666428== Rerun with --leak-check=full to see details of leaked memory
+==2666428== 
+==2666428== For lists of detected and suppressed errors, rerun with: -s
+==2666428== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

@@ -1,0 +1,52 @@
+==2666706== Memcheck, a memory error detector
+==2666706== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2666706== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2666706== Command: ../intro -g -t 100 -u inputs/A_uniq_nonseq.txt -c inputs/A_noexist.txt -g -t 20 -u inputs/A_uniq_simple.txt -c inputs/B_cat.txt
+==2666706== 
+Goodbye!
+== HEADING ==
+
+This is some sample text. It is in a longer paragraph so that there are multiple
+lines of output. After this paragraph, there is single blank line before the
+second (and final) paragraph.
+
+This is the final paragraph. There is also a blank line after this sentence.
+
+odd
+2
+triodd
+4
+odd
+tri
+odd
+8
+triodd
+10
+odd
+tri
+odd
+14
+triodd
+16
+odd
+tri
+odd
+20
+aaa
+bbb
+ccc
+==2666706== 
+==2666706== HEAP SUMMARY:
+==2666706==     in use at exit: 944 bytes in 2 blocks
+==2666706==   total heap usage: 7 allocs, 5 frees, 26,464 bytes allocated
+==2666706== 
+==2666706== LEAK SUMMARY:
+==2666706==    definitely lost: 0 bytes in 0 blocks
+==2666706==    indirectly lost: 0 bytes in 0 blocks
+==2666706==      possibly lost: 0 bytes in 0 blocks
+==2666706==    still reachable: 944 bytes in 2 blocks
+==2666706==         suppressed: 0 bytes in 0 blocks
+==2666706== Rerun with --leak-check=full to see details of leaked memory
+==2666706== 
+==2666706== For lists of detected and suppressed errors, rerun with: -s
+==2666706== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

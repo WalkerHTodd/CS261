@@ -1,0 +1,16 @@
+==2666549== Memcheck, a memory error detector
+==2666549== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2666549== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2666549== Command: ../intro -u
+==2666549== 
+../intro: option requires an argument -- 'u'
+Invalid argument.
+==2666549== 
+==2666549== HEAP SUMMARY:
+==2666549==     in use at exit: 0 bytes in 0 blocks
+==2666549==   total heap usage: 1 allocs, 1 frees, 8,192 bytes allocated
+==2666549== 
+==2666549== All heap blocks were freed -- no leaks are possible
+==2666549== 
+==2666549== For lists of detected and suppressed errors, rerun with: -s
+==2666549== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

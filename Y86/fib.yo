@@ -1,0 +1,46 @@
+  0x000:                      | .pos 0x0 code
+  0x000: 700001000000000000   |     jmp _start
+                              | 
+  0x100:                      | .pos 0x100 code
+  0x100:                      | _start:
+  0x100: 30f00004000000000000 |     irmovq $0x400, %rax
+  0x10a: 30f10800000000000000 |     irmovq $0x8, %rcx
+                              | 
+  0x114: 30f20000000000000000 |     irmovq $0, %rdx
+  0x11e: 30f80100000000000000 |     irmovq $1, %r8
+                              | 
+  0x128: 30f30a00000000000000 |     irmovq $10, %rbx
+  0x132: 30f40000000000000000 |     irmovq $0, %rsp
+                              |     
+                              |     //RDI?
+  0x13c: 30f70100000000000000 |     irmovq $1, %rdi
+                              | 
+  0x146: 707001000000000000   |     jmp _L2
+                              | 
+  0x14f:                      | _L1:
+  0x14f: 2047                 |     rrmovq %rsp, %rdi
+                              |     
+  0x151: 6057                 |     addq %rbp, %rdi
+                              | 
+  0x153: 40700000000000000000 |     rmmovq %rdi, (%rax)
+                              | 
+  0x15d: 2049                 |     rrmovq %rsp, %r9
+  0x15f: 2074                 |     rrmovq %rdi, %rsp
+                              |     //RDI?
+  0x161: 2097                 |     rrmovq %r9, %rdi
+                              | 
+  0x163: 6082                 |     addq %r8, %rdx
+                              | 
+  0x165: 6010                 |     addq %rcx, %rax
+                              | 
+  0x167: 707001000000000000   |     jmp _L2
+                              | 
+                              | 
+  0x170:                      | _L2:
+                              |     //Comparing
+  0x170: 2026                 |     rrmovq %rdx, %rsi
+                              | 
+  0x172: 6136                 |     subq %rbx, %rsi
+                              | 
+  0x174: 724f01000000000000   |     jl _L1
+  0x17d: 00                   |     halt    

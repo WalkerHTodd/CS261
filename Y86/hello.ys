@@ -1,0 +1,11 @@
+.pos 0x0 code:
+	jmp 0x100
+	halt
+
+
+.pos 0x100 code
+_start:
+	irmovq $7, %rcx
+	irmovq $2, %rax
+	addq %rcx, %rax
+	halt	

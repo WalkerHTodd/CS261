@@ -1,0 +1,21 @@
+==2667154== Memcheck, a memory error detector
+==2667154== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2667154== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2667154== Command: ../y86 inputs/bad-phdr_short.o
+==2667154== 
+Failed to read file
+==2667154== 
+==2667154== HEAP SUMMARY:
+==2667154==     in use at exit: 8,664 bytes in 2 blocks
+==2667154==   total heap usage: 4 allocs, 2 frees, 25,048 bytes allocated
+==2667154== 
+==2667154== LEAK SUMMARY:
+==2667154==    definitely lost: 0 bytes in 0 blocks
+==2667154==    indirectly lost: 0 bytes in 0 blocks
+==2667154==      possibly lost: 0 bytes in 0 blocks
+==2667154==    still reachable: 8,664 bytes in 2 blocks
+==2667154==         suppressed: 0 bytes in 0 blocks
+==2667154== Rerun with --leak-check=full to see details of leaked memory
+==2667154== 
+==2667154== For lists of detected and suppressed errors, rerun with: -s
+==2667154== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

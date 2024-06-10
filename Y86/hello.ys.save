@@ -1,0 +1,4 @@
+.pos 0x100 code
+_start:
+	irmovq $7, %rcx
+	
